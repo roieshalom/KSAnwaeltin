@@ -20,7 +20,7 @@ body { font-family: 'Noto Serif', Georgia, serif; color: var(--color-dark); }
 
 .overlay {
     height: 100vh;
-    background: var(--color-light);
+    background: var(--color-light) opacity(0.15);
     backdrop-filter: blur(2px);
 }
 
