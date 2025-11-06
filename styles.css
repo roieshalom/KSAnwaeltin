@@ -1,26 +1,28 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600&display=swap');
 
-
 :root {
-    --color-dark: #003d79;
-    --color-accent: #885310;
-    --color-light: #fbfbfb;
+    --color-dark: #2c3e50;
+    --color-accent: #8b7355;
+    --color-light: rgba(248, 249, 250, 0.95);
 }
 
-body { font-family: 'Noto Serif', Georgia, serif; color: var(--color-dark); }
+body { 
+    font-family: 'Noto Serif', Georgia, serif;
+    color: var(--color-dark);
+}
 
 .hero-section {
     height: 100vh;
     background-image: url('content/ksbg.jpg');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
 }
 
 .overlay {
     height: 100vh;
-    background: var(--color-light) opacity(0.15);
+    background: var(--color-light);
     backdrop-filter: blur(2px);
 }
 
@@ -34,55 +36,55 @@ body { font-family: 'Noto Serif', Georgia, serif; color: var(--color-dark); }
     justify-content: space-between;
 }
 
-/* Typography - 4 levels */
 h1 { font-size: 2.5rem; font-weight: 400; letter-spacing: 1px; margin-bottom: 0.5rem; }
 h2 { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.8rem; }
 h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 0.8rem; }
 p, li { font-size: 1rem; line-height: 1.5; }
 
-/* Links */
 a { color: var(--color-accent); text-decoration: none; transition: all 0.2s; }
 a:hover { color: var(--color-dark); border-bottom: 1px solid var(--color-accent); }
 
-header {
-    text-align: center;
-    padding: 1rem 0 1.5rem;
-    border-bottom: 2px solid var(--color-accent);
-}
-
+header { text-align: center; padding: 1rem 0 1.5rem; border-bottom: 2px solid var(--color-accent); }
 .credentials { font-size: 1.1rem; color: var(--color-accent); font-style: italic; }
 
-main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-    padding: 1.5rem 0;
-}
+main { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; padding: 1.5rem 0; }
 
-.intro { grid-column: 1 / -1; text-align: center; }
+.intro { text-align: center; }
 .tagline { color: #6c757d; font-style: italic; }
 
-.services, .contact {
+.services, .contact-card {
     background: rgba(255, 255, 255, 0.8);
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 4px solid var(--color-accent);
 }
 
-.services h3, .contact h3 { text-align: center; margin-bottom: 1rem; }
+.services h3, .contact-card h3 { text-align: center; margin-bottom: 1rem; }
 
-.services-list { list-style: none; }
-.services-list li { padding: 0.5rem 0; display: flex; align-items: center; gap: 0.8rem; }
-.service-icon { font-size: 1.3rem; }
+.services-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
 
-.contact { text-align: center; }
+.services-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.service-icon { font-size: 2rem; }
+.service-name { font-size: 0.85rem; }
+
+.contact-card { text-align: center; }
 .contact-info { display: flex; flex-direction: column; gap: 0.8rem; }
 .contact-item { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
 .contact-icon { font-size: 1.2rem; }
 
-.note {
+.consultation-note {
     font-style: italic;
     color: #6c757d;
     margin-top: 1rem;
@@ -102,7 +104,7 @@ footer {
 footer a { margin: 0 0.5rem; }
 
 @media (max-width: 768px) {
-    main { grid-template-columns: 1fr; gap: 1.5rem; }
+    .services-list { grid-template-columns: repeat(2, 1fr); }
     h1 { font-size: 2rem; }
-    .services, .contact { padding: 1.2rem; }
+    .services, .contact-card { padding: 1.2rem; }
 }
