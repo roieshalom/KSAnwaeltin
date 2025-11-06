@@ -3,9 +3,9 @@
 
 
 :root {
-    --color-dark: #2c3e50;
-    --color-accent: #8b7355;
-    --color-light: rgba(248, 249, 250, 0.15);
+    --color-dark: #003d79;
+    --color-accent: #885310;
+    --color-light: #fbfbfb;
 }
 
 body { font-family: 'Noto Serif', Georgia, serif; color: var(--color-dark); }
