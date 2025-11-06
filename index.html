@@ -1,82 +1,246 @@
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanzlei [Name] - FachanwÃ¤ltin fÃ¼r Familienrecht in Berlin</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kanzlei - Fachanwältin für Familienrecht in Berlin</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base */
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+
+        /* Hero */
+        .hero-section {
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .overlay {
+            min-height: 100vh;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        h2, h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #8b7355;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #2c3e50;
+            border-bottom: 1px solid #8b7355;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 2px solid #8b7355;
+            margin-bottom: 50px;
+        }
+
+        .credentials {
+            font-size: 1.2rem;
+            color: #8b7355;
+            font-style: italic;
+        }
+
+        /* Sections */
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .services, .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .services h3, .contact-card h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Services */
+        .services-list {
+            list-style: none;
+        }
+
+        .services-list li {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #8b7355;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        /* Contact */
+        .contact-card {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        .consultation-note {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+        }
+
+        footer a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="hero-section">
-        <div class="overlay"></div>
-        <div class="content-wrapper">
-            <header>
-                <div class="logo-area">
-                    <h1 class="lawyer-name">[Ihr Name]</h1>
-                    <p class="credentials">FachanwÃ¤ltin fÃ¼r Familienrecht</p>
-                </div>
-            </header>
-
-            <main>
-                <section class="intro">
-                    <h2>Vertrauensvolle Beratung in familiÃ¤ren Angelegenheiten</h2>
-                    <p class="tagline">Mit Erfahrung und EinfÃ¼hlungsvermÃ¶gen an Ihrer Seite</p>
-                </section>
-
-                <section class="services">
-                    <h3>Rechtsberatung in folgenden Bereichen</h3>
-                    <ul class="services-list">
-                        <li>
-                            <span class="service-icon">âš–</span>
-                            <span class="service-name">Scheidung & Trennung</span>
-                        </li>
-                        <li>
-                            <span class="service-icon">ðŸ‘¨â€ðŸ‘©â€ðŸ‘§</span>
-                            <span class="service-name">Sorgerecht & Umgangsrecht</span>
-                        </li>
-                        <li>
-                            <span class="service-icon">ðŸ’°</span>
-                            <span class="service-name">Unterhalt</span>
-                        </li>
-                        <li>
-                            <span class="service-icon">ðŸ </span>
-                            <span class="service-name">VermÃ¶gensaufteilung</span>
-                        </li>
-                        <li>
-                            <span class="service-icon">ðŸ“</span>
-                            <span class="service-name">EhevertrÃ¤ge</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="contact">
-                    <div class="contact-card">
-                        <h3>Kontakt</h3>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <span class="contact-icon">ðŸ“ž</span>
-                                <a href="tel:+493012345678" class="contact-link">+49 (0)30 123 456 78</a>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">âœ‰ï¸</span>
-                                <a href="mailto:kontakt@kanzlei-beispiel.de" class="contact-link">kontakt@kanzlei-beispiel.de</a>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">ðŸ“</span>
-                                <span class="contact-text">Berlin-Mitte</span>
-                            </div>
-                        </div>
-                        <p class="consultation-note">Termine nach Vereinbarung</p>
+        <div class="overlay">
+            <div class="content-wrapper">
+                <header>
+                    <div class="logo-area">
+                        <h1 class="lawyer-name">TEST - CAN YOU SEE THIS?</h1>
+                        <p class="credentials">Fachanwältin für Familienrecht</p>
                     </div>
-                </section>
-            </main>
+                </header>
 
-            <footer>
-                <p>&copy; 2025 Kanzlei [Name] | <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutz</a></p>
-            </footer>
+                <main>
+                    <section class="intro">
+                        <h2>Vertrauensvolle Beratung in familiären Angelegenheiten</h2>
+                        <p class="tagline">Mit Erfahrung und Einfühlungsvermögen an Ihrer Seite</p>
+                    </section>
+
+                    <section class="services">
+                        <h3>Rechtsberatung in folgenden Bereichen</h3>
+                        <ul class="services-list">
+                            <li>
+                                <span class="service-icon">⚖️</span>
+                                <span class="service-name">Scheidung & Trennung</span>
+                            </li>
+                            <li>
+                                <span class="service-icon">👨‍👩‍👧</span>
+                                <span class="service-name">Sorgerecht & Umgangsrecht</span>
+                            </li>
+                            <li>
+                                <span class="service-icon">💰</span>
+                                <span class="service-name">Unterhalt</span>
+                            </li>
+                            <li>
+                                <span class="service-icon">🏠</span>
+                                <span class="service-name">Vermögensaufteilung</span>
+                            </li>
+                            <li>
+                                <span class="service-icon">📝</span>
+                                <span class="service-name">Eheverträge</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="contact">
+                        <div class="contact-card">
+                            <h3>Kontakt</h3>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span class="contact-icon">📞</span>
+                                    <a href="tel:+493012345678" class="contact-link">+49 (0)30 123 456 78</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">✉️</span>
+                                    <a href="mailto:kontakt@kanzlei-beispiel.de" class="contact-link">kontakt@kanzlei-beispiel.de</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-icon">📍</span>
+                                    <span class="contact-text">Berlin-Mitte</span>
+                                </div>
+                            </div>
+                            <p class="consultation-note">Termine nach Vereinbarung</p>
+                        </div>
+                    </section>
+                </main>
+
+                <footer>
+                    <p>&copy; 2025 Kanzlei [Name] | <a href="#impressum">Impressum</a> | <a href="#datenschutz">Datenschutz</a></p>
+                </footer>
+            </div>
         </div>
     </div>
 </body>
 </html>
-```
