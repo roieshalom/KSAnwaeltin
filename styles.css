@@ -10,9 +10,10 @@ body { font-family: Georgia, serif; color: var(--color-dark); }
 
 .hero-section {
     height: 100vh;
-    background-image: url('background.jpg');
+    background-image: url('content/ksbg.jpg');
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .overlay {
