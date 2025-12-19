@@ -56,10 +56,33 @@
     --contact-gap: 2rem;
 }
 
+
+
+/* keep only this fixed background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("content/ksbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
 body { 
     font-family: var(--font-family-base);
     color: var(--color-dark);
+    position: relative;
+    min-height: 100vh;
+    background: none !important;
 }
+
+.hero-section {
+    min-height: 100vh;
+    background: none !important;
+}
+
 
 /* BACKGROUND FIX */
 .hero-section {
@@ -70,12 +93,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* OVERLAY FIX */
-.overlay {
-    min-height: 100vh;
-    background: rgba(255, 254, 244, 0.15);
-    backdrop-filter: blur(var(--blur-amount));
-}
 
 /* CONTENT WRAPPER FIX */
 .content-wrapper {
