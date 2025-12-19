@@ -73,7 +73,7 @@ body {
 /* OVERLAY FIX */
 .overlay {
     min-height: 100vh;
-    background: rgba(255, 254, 244, 0.85);
+    background: rgba(255, 254, 244, 0.15);
     backdrop-filter: blur(var(--blur-amount));
 }
 
