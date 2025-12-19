@@ -110,14 +110,17 @@ p, li {
 
 a { 
     color: var(--color-accent); 
-    text-decoration: none; 
+    text-decoration: underline;
+    text-decoration-thickness: var(--border-width);
+    text-underline-offset: 3px;
     transition: all var(--transition-speed); 
 }
 
 a:hover { 
     color: var(--color-dark); 
-    border-bottom: var(--border-width) solid var(--color-accent); 
+    text-decoration-thickness: var(--border-width-thick);
 }
+
 
 header { 
     text-align: center; 
