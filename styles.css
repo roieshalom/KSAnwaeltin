@@ -70,6 +70,11 @@ body::before {
   z-index: -1;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body { 
     font-family: var(--font-family-base);
     color: var(--color-dark);
@@ -249,4 +254,11 @@ footer a { margin: 0 var(--spacing-xs); }
     .services-list { grid-template-columns: var(--grid-columns-mobile); }
     h1 { font-size: var(--spacing-xl); }
     .services, .contact-card { padding: var(--padding-sm); }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    width: 100vw;
+  }
 }
