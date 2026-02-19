@@ -153,7 +153,7 @@ header {
 }
 
 .credentials { 
-  font-size: var(--font-size-credentials); 
+  font-size: var(--font-size-icon); 
   color: var(--color-accent); 
   font-style: italic; 
 }
